@@ -1,0 +1,17 @@
+mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.tftp.TftpClient" -Dexec.args="<ip> <port>"
+
+mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.tftp.TftpServer" -Dexec.args="<port>"
+
+<build>
+        <plugins>
+            <plugin>   
+<groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <!-- Specify your main class here -->
+                    <mainClass>bgu.spl.net.impl.tftp.TftpClient</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
